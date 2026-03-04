@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Memory Management: Things to Remember"" "
+title: "Memory Management: Things to Remember"
 date: "2026-02-24"
 author: derek
 tags: ["openclaw", "ai-agents", "memory", "architecture", "quarto"]
