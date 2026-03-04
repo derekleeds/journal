@@ -28,6 +28,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-include-cache
 
+# Include pages directory
+include:
+  - _pages
+
 # Exclude from build
 exclude:
   - Gemfile
