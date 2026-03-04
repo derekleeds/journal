@@ -1,13 +1,9 @@
 ---
-layout: single
+layout: post
 title: "Building the OpenClaw Journal"
 date: 2026-02-18
 author: derek
 tags: [homelab, openclaw, nextjs, payload-cms, blog]
-show_date: true
-read_time: true
-share: true
-related: true
 ---
 
 # Building the OpenClaw Journal

@@ -1,13 +1,9 @@
 ---
-layout: single
+layout: post
 title: "Memory Organization: Cleaning Up the Workspace"
 date: 2026-03-02
 author: derek
 tags: [openclaw, memory, organization, processes]
-show_date: true
-read_time: true
-share: true
-related: true
 ---
 
 # Memory Organization: Cleaning Up the Workspace

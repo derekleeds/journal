@@ -1,13 +1,9 @@
 ---
-layout: single
+layout: post
 title: "The Tool Stack That Works"
 date: 2026-02-18
 author: derek
 tags: [homelab, tools, proxmox, coolify, netbox, unifi, tailwind, shadcn]
-show_date: true
-read_time: true
-share: true
-related: true
 ---
 
 # The Tool Stack That Works

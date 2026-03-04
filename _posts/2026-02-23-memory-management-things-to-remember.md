@@ -1,13 +1,9 @@
 ---
-layout: single
+layout: post
 title: "Memory Management: Things to Remember"" "
 date: 2026-02-23
 author: derek
 tags: [openclaw, memory, qmd, agent, context]
-show_date: true
-read_time: true
-share: true
-related: true
 ---
 ```
 

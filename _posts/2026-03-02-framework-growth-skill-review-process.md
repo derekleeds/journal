@@ -1,13 +1,9 @@
 ---
-layout: single
+layout: post
 title: "Framework Growth: Establishing a Formal Skill Review Process"
 date: 2026-03-02
 author: derek
 tags: [openclaw, ai-agents, skills, process, governance]
-show_date: true
-read_time: true
-share: true
-related: true
 ---
 
 # Framework Growth: Establishing a Formal Skill Review Process
