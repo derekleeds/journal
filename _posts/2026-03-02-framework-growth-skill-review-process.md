@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Framework Growth: Establishing a Formal Skill Review Process"
 date: 2026-03-02
 header:

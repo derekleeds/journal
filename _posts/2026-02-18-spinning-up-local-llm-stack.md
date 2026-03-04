@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Spinning Up a Local LLM Stack on the MS-S1 MAX"
 date: 2026-02-18
 header:

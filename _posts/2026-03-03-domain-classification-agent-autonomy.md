@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Domain Classification for Agent Autonomy"
 date: 2026-03-03
 header:

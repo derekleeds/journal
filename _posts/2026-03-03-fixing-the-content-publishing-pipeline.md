@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Fixing the Content Publishing Pipeline"
 date: 2026-03-03
 header:

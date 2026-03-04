@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Organizing Clawdia's Brain: How We Structured OpenClaw for Scale"
 date: 2026-02-28
 header:

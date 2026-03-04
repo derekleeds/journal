@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Memory Files: Why QMD Format"
 date: 2026-02-23
 header:

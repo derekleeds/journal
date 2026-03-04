@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "The Librarian: Why Every Agentic System Needs a Standards Guardian"
 date: 2026-03-02
 header:

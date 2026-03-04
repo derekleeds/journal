@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Memory Management: Things to Remember"
 date: 2026-02-24
 header:

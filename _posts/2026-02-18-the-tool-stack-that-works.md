@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "The Tool Stack That Works"
 date: 2026-02-18
 header:

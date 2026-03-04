@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Forum Channels as a Knowledge Discovery Layer"
 date: 2026-03-03
 header:

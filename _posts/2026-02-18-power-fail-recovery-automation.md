@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Building a Power-Fail Recovery System for Homelab"
 date: 2026-02-18
 header:

@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Lessons from the Trenches"
 date: 2026-02-18
 header:

@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Building the OpenClaw Journal"
 date: 2026-02-18
 header:

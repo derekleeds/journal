@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Memory Organization: Cleaning Up the Workspace"
 date: 2026-03-02
 header:
