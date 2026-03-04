@@ -7,36 +7,11 @@ author: derek
 tags: [cynefin, ai-agents, homelab, operations]
 ---
 
+![Sketch of the Cynefin framework](/assets/img/cynefin-framework.png)
+
+*Sketch of the Cynefin framework by Edwin Stoop, via [Wikipedia](https://en.wikipedia.org/wiki/Cynefin_framework) (CC BY-SA)*
+
 The Cynefin framework helps classify problem domains by cause-effect relationships.
-
-```
-                    ┌─────────────────────────────────────┐
-                    │           DISORDER                  │
-                    │   (don't know which domain)         │
-                    └─────────────────────────────────────┘
-                           ↙           ↘
-    ┌─────────────────┐              ┌─────────────────┐
-    │     CLEAR       │              │    CHAOTIC      │
-    │   (Obvious)     │              │  (Unknowable)   │
-    │                 │              │                 │
-    │ Sense-Categorize│              │ Act-Sense-Respond
-    │ Respond         │              │                 │
-    │                 │              │                 │
-    │ Best Practices  │              │ Rapid Response  │
-    └─────────────────┘              └─────────────────┘
-           ↓                                ↑
-    ┌─────────────────┐              ┌─────────────────┐
-    │  COMPLICATED    │              │    COMPLEX      │
-    │  (Knowable)     │              │  (Emergent)     │
-    │                 │              │                 │
-    │ Sense-Analyze   │              │ Probe-Sense-    │
-    │ Respond         │              │ Respond         │
-    │                 │              │                 │
-    │ Expert Analysis │              │ Safe-to-Fail    │
-    └─────────────────┘              └─────────────────┘
-```
-
-*[Cynefin framework](https://en.wikipedia.org/wiki/Cynefin_framework) by Dave Snowden (CC BY-SA)*
 
 How do you know when an AI agent can act on its own, and when it needs human approval? I've been thinking about this question a lot while building Clawdia, my homelab automation agent.
 
