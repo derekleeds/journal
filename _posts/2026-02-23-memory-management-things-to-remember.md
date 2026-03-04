@@ -6,6 +6,8 @@ author: derek
 tags: [openclaw, memory, qmd, agent, context]
 show_date: true
 read_time: true
+share: true
+related: true
 ---
 ```
 

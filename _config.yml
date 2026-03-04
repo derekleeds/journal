@@ -1,33 +1,33 @@
 # Jekyll configuration for OpenClaw Journal
-# Theme: Minimal Mistakes (dark)
+# Deploy to Cloudflare Pages using minima theme
 
-title: "OpenClaw Journal"
-description: "Homelab adventures, AI agents, and learning by doing."
+title: OpenClaw Journal
+description: Homelab adventures, AI agents, and learning by doing.
 author: Derek Leeds
 email: contact@derekleeds.com
 
 # Site URL
-url: "https://journal.derekleeds.cloud"
+url: "https://journal-3tx.pages.dev"
 baseurl: ""
 
 # Timezone
 timezone: America/Chicago
 
-# Theme
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin: "dark"
-
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Theme - minima (simple, reliable)
+theme: minima
+
+# Permalinks - clean URLs
+permalink: /:title/
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-include-cache
-  - jekyll-remote-theme
 
 # Exclude from build
 exclude:
@@ -38,41 +38,21 @@ exclude:
   - README.md
   - LICENSE
   - migrate-posts.sh
+  - .jekyll-cache
+  - _site
 
-# Include
-include:
-  - _pages
-
-# Permalinks
-permalink: /:title/
-
-# Site settings
-logo: "/assets/img/logo.png"
-masthead_title: "OpenClaw Journal"
-search: true
-search_full_content: true
-
-# Reading time
-reading_time: true
+# Blog settings
+show_excerpts: true
 
 # Social
-twitter_username:
 github_username: derekleeds
 
-# Footer
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/derekleeds"
+# Navigation header links
+header_pages:
+  - about.md
 
-# Comments (disabled)
-comments:
-  provider: false
-
-# Analytics (optional - uncomment to enable)
-# google_analytics: UA-NNNNNN-N
-
-# Pagination (if needed later)
-# paginate: 10
-# paginate_path: /page:num/
+# Minima theme settings
+minima:
+  skin: dark
+  social_links:
+    github: derekleeds
