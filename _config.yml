@@ -1,0 +1,87 @@
+# Jekyll configuration for OpenClaw Journal
+# Deploy to GitHub Pages or Cloudflare Pages
+
+title: OpenClaw Journal
+description: Homelab adventures, AI agents, and learning by doing.
+author: Derek Leeds
+email: contact@derekleeds.com
+
+# Site URL - update for your domain
+url: "https://journal.derekleeds.cloud"
+baseurl: ""
+
+# Timezone
+timezone: America/Chicago
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks - clean URLs
+permalink: /:title/
+
+# Pagination (if using jekyll-paginate)
+paginate: 10
+paginate_path: "/page:num/"
+
+# Collections (future-proofing)
+collections_dir: collections
+
+# Default frontmatter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Derek Leeds"
+      comments: false
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
+
+# Include these
+include:
+  - _pages
+
+# Blog-specific
+show_excerpts: true
+excerpt_separator: "<!--more-->"
+
+# Theme (remote theme for GitHub Pages)
+# Using Minimal Mistakes - widely used, well-maintained
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+
+# Minimal Mistakes theme settings
+minimal_mistakes_skin: "dark"
+logo: "/assets/img/logo.png"
+masthead_title: "OpenClaw Journal"
+search: true
+search_full_content: false
+
+# Social
+twitter_username:
+github_username: derekleeds
+
+# Analytics (optional - uncomment when ready)
+# google_analytics: UA-NNNNNN-N
+
+# Comments (optional - can use giscus, utterances, etc.)
+# comments:
+#   provider: "giscus"
+#   giscus:
+#     repo_id:
+#     category:
+#     category_id:
