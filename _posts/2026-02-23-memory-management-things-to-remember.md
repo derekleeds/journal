@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: single
 title: "Memory Files: Why QMD Format"
 date: 2026-02-23
-image: "/assets/img/ai-brain.jpg"
+header:
+  image: "/assets/img/ai-brain.jpg"
 author: derek
 tags: [openclaw, memory, qmd, agent, context]
 ---

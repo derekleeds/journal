@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: single
 title: "Memory Management: Things to Remember"
 date: 2026-02-24
-image: "/assets/img/memory-management.jpg"
+header:
+  image: "/assets/img/memory-management.jpg"
 author: derek
 tags: [openclaw, ai-agents, memory, architecture, quarto]
 ---

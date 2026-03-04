@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: single
 title: "Fixing the Content Publishing Pipeline"
 date: 2026-03-03
-image: "/assets/img/content-pipeline.jpg"
+header:
+  image: "/assets/img/content-pipeline.jpg"
 author: derek
 tags: [openclaw, publishing, debugging, payload-cms, vercel]
 ---

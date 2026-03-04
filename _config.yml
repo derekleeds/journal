@@ -1,5 +1,5 @@
 # Jekyll configuration for OpenClaw Journal
-# Deploy to Cloudflare Pages using minima theme
+# Theme: Minimal Mistakes
 
 title: OpenClaw Journal
 description: Homelab adventures, AI agents, and learning by doing.
@@ -16,9 +16,7 @@ timezone: America/Chicago
 # Build settings
 markdown: kramdown
 highlighter: rouge
-
-# Theme - minima (simple, reliable)
-theme: minima
+theme: minimal-mistakes-jekyll
 
 # Permalinks - clean URLs
 permalink: /:title/
@@ -28,6 +26,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-include-cache
 
 # Exclude from build
 exclude:
@@ -41,18 +40,55 @@ exclude:
   - .jekyll-cache
   - _site
 
-# Blog settings
-show_excerpts: true
+# Minimal Mistakes theme settings
+minimal_mistakes_skin: dark
 
-# Social
-github_username: derekleeds
+# Site author (for Minimal Mistakes)
+author:
+  name: "Derek Leeds"
+  avatar: "/assets/img/avatar.jpg"
+  bio: "Building AI agents and homelabs"
+  location: "Chicago"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/derekleeds"
 
-# Navigation header links
-header_pages:
-  - about.md
+# Site teaser image (default for posts without images)
+teaser: /assets/img/journal.jpg
 
-# Minima theme settings
-minima:
-  skin: dark
-  social_links:
-    github: derekleeds
+# Default front matter for posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+
+# Pagination (Minimal Mistakes style)
+paginate: 10
+paginate_path: /page:num/
+
+# breadcrumbs
+breadcrumbs: true
+
+# Table of contents
+toc: true
+toc_label: "On this page"
+toc_icon: "list"
+toc_sticky: true
+
+# Search
+search: true
+search_full_content: true
+
+# Footer links
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/derekleeds"
