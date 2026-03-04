@@ -10,5 +10,4 @@ group :jekyll_plugins do
   gem "jekyll-include-cache", "~> 0.2"
 end
 
-# For GitHub Pages deployment
-gem "github-pages", group: :jekyll_plugins
+# GitHub Pages gem removed - deploying to Cloudflare Pages instead
