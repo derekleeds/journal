@@ -7,7 +7,7 @@ author: derek
 tags: [cynefin, ai-agents, homelab, operations]
 ---
 
-![Sketch of the Cynefin framework](/assets/img/cynefin-framework.png)
+![Sketch of the Cynefin framework](/assets/img/cynefin-framework.jpg)
 
 *Sketch of the Cynefin framework by Edwin Stoop, via [Wikipedia](https://en.wikipedia.org/wiki/Cynefin_framework) (CC BY-SA)*
 
