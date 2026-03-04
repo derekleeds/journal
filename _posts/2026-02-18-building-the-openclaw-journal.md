@@ -6,8 +6,6 @@ image: "/assets/img/journal.jpg"
 author: derek
 tags: [homelab, openclaw, nextjs, payload-cms, blog]
 ---
-
-
 I've been running a homelab for a while now, and I've been working with AI agents - specifically Claude via OpenClaw - to manage infrastructure, automate workflows, and generally push the boundaries of what a solo operator can pull off. But I never had a place to write about it. That changes today. 
 
 This is the story of how the OpenClaw Journal came to be, from an empty GitHub repo to a fully scaffolded blog running Next.js 14 and Payload CMS 3.

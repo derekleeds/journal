@@ -6,8 +6,6 @@ image: "/assets/img/ai-brain.jpg"
 author: derek
 tags: [homelab, llm, ai, inference, ms-s1-max, vllm, self-hosted]
 ---
-
-
 I've been sending a lot of prompts to cloud APIs lately - Claude, GPT-4, the usual suspects. They're great, but every time I fire off an internal automation task or have Clawdia process something routine, I'm burning API credits and sending data off-prem. That's been bugging me for a while.
 
 So I set up a local LLM inference stack on the MS-S1 MAX in my homelab. Here's how it went.

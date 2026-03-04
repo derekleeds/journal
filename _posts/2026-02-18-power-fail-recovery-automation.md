@@ -6,8 +6,6 @@ image: "/assets/img/server-tech.jpg"
 author: derek
 tags: [homelab, automation, unraid, home-assistant, n8n, ups]
 ---
-
-
 I live in an area where the power goes out a few times a year. Not long outages usually - 30 minutes, maybe an hour - but long enough to matter when you're running a homelab that hosts real services.
 
 My Unraid server sits behind an Eaton 5PX 1500 UPS, and the UPS does its job. When power drops, it keeps the server alive long enough to trigger a clean shutdown through the NUT (Network UPS Tools) integration. The array stops, the drives park, the machine powers off gracefully. That part works great.

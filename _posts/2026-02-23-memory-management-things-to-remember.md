@@ -5,8 +5,7 @@ date: 2026-02-23
 image: "/assets/img/ai-brain.jpg"
 author: derek
 tags: [openclaw, memory, qmd, agent, context]
----
-```
+---```
 
 ### Why QMD?
 

@@ -6,9 +6,6 @@ image: "/assets/img/journal.jpg"
 author: derek
 tags: [openclaw, ai-agents, skills, process, governance]
 ---
-
-
-
 Today was one of those sessions that started with one goal and evolved into something much more significant. We began with a Discord server reorganization plan and ended up creating a formal governance process for adding new capabilities to OpenClaw. This is how frameworks mature.
 
 ## The Session That Grew

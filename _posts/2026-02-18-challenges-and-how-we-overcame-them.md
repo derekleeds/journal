@@ -6,8 +6,6 @@ image: "/assets/img/problem-solving.jpg"
 author: derek
 tags: [openclaw, homelab, troubleshooting, lessons-learned]
 ---
-
-
 Nothing in the homelab works on the first try. That's not a complaint - it's just reality. Every project comes with its own set of obstacles, and the OpenClaw Journal was no exception.
 
 Here's an honest accounting of what went wrong and how we fixed it. If you're building something similar, maybe this saves you a few hours of debugging. 

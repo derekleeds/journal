@@ -6,7 +6,6 @@ image: "/assets/img/librarian-agent.jpg"
 author: derek
 tags: [openclaw, agents, librarian, knowledge-management, ai-teams]
 ---
-
 If you are building agentic systems, you will eventually face a question: who is responsible for keeping things organized? Not the tasks themselves, but the system that does the tasks. The frameworks, the documentation, the standards. Someone needs to own that. In OpenClaw, that someone is the librarian.
 
 ## What the Librarian Actually Does

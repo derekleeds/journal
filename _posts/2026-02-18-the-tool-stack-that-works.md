@@ -6,8 +6,6 @@ image: "/assets/img/tools.jpg"
 author: derek
 tags: [homelab, tools, proxmox, coolify, netbox, unifi, tailwind, shadcn]
 ---
-
-
 After a lot of trial and error, I've landed on a homelab tool stack that actually works - not just individually, but together as a system. Each tool earns its place by solving a specific problem well and playing nicely with everything else.
 
 Here's what I'm running and why. 

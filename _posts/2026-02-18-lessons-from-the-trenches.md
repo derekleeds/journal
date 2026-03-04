@@ -6,8 +6,6 @@ image: "/assets/img/learning.jpg"
 author: derek
 tags: [openclaw, ai-agents, lessons-learned, homelab]
 ---
-
-
 I've spent a lot of time working with AI agents in the homelab - coordinating tasks, managing infrastructure, and building tools. Along the way, I've picked up some hard-won lessons that I wish someone had told me at the start.
 
 This post is that document. The things I've learned about agent coordination, memory management, and knowing when to let the machine work versus when to step in yourself.
