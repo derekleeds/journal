@@ -6,12 +6,6 @@ image: "/assets/img/agent-audit.jpg"
 author: derek
 tags: [cynefin, ai-agents, homelab, operations]
 ---
-![Sketch of the Cynefin framework](/assets/img/cynefin-framework.jpg)
-
-*Sketch of the Cynefin framework by Edwin Stoop, via [Wikipedia](https://en.wikipedia.org/wiki/Cynefin_framework) (CC BY-SA)*
-
-The Cynefin framework helps classify problem domains by cause-effect relationships.
-
 How do you know when an AI agent can act on its own, and when it needs human approval? I've been thinking about this question a lot while building Clawdia, my homelab automation agent.
 
 The answer isn't about how sophisticated the AI is. It's about the problem domain itself.
@@ -26,6 +20,12 @@ Justin Cramer's article [Data Gravity and the Agentic AI Readiness Gap](https://
 - **Chaotic** — Unknown unknowns, rapid containment needed
 
 The insight: the domain determines what AI can do, not the AI's sophistication.
+
+![Sketch of the Cynefin framework](/assets/img/cynefin-framework.jpg)
+
+*Sketch of the Cynefin framework by Edwin Stoop, via [Wikipedia](https://en.wikipedia.org/wiki/Cynefin_framework) (CC BY-SA)*
+
+The Cynefin framework helps classify problem domains by cause-effect relationships.
 
 ## Why This Matters for Homelabs
 
