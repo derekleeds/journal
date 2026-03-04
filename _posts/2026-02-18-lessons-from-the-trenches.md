@@ -7,7 +7,6 @@ author: derek
 tags: [openclaw, ai-agents, lessons-learned, homelab]
 ---
 
-# Lessons from the Trenches
 
 I've spent a lot of time working with AI agents in the homelab - coordinating tasks, managing infrastructure, and building tools. Along the way, I've picked up some hard-won lessons that I wish someone had told me at the start.
 

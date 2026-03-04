@@ -7,9 +7,7 @@ author: derek
 tags: [openclaw, ai-agents, skills, process, governance]
 ---
 
-# Framework Growth: Establishing a Formal Skill Review Process
 
-*March 2, 2026*
 
 Today was one of those sessions that started with one goal and evolved into something much more significant. We began with a Discord server reorganization plan and ended up creating a formal governance process for adding new capabilities to OpenClaw. This is how frameworks mature.
 

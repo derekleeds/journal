@@ -7,9 +7,7 @@ author: derek
 tags: [openclaw, memory, organization, processes]
 ---
 
-# Memory Organization: Cleaning Up the Workspace
 
-*March 2, 2026*
 
 Sometimes the most important work isn't building something new - it's cleaning up what you have. Today we discovered that our memory organization, the system designed to keep OpenClaw consistent across sessions, had become inconsistent itself. Here's how we found the problem and what we did about it.
 

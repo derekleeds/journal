@@ -7,9 +7,7 @@ author: derek
 tags: [openclaw, ai-agents, memory, organization, devops]
 ---
 
-# Organizing Clawdia's Brain: How We Structured OpenClaw for Scale
 
-*February 28, 2026*
 
 If you've ever tried to keep an AI agent organized, you know the struggle. One day it's helping with devops, the next it's writing blog posts, and suddenly you realize it's trying to use your Notion API credentials to debug a Docker container. Context gets messy fast.
 

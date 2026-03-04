@@ -7,7 +7,6 @@ author: derek
 tags: [homelab, llm, ai, inference, ms-s1-max, vllm, self-hosted]
 ---
 
-# Spinning Up a Local LLM Stack on the MS-S1 MAX
 
 I've been sending a lot of prompts to cloud APIs lately - Claude, GPT-4, the usual suspects. They're great, but every time I fire off an internal automation task or have Clawdia process something routine, I'm burning API credits and sending data off-prem. That's been bugging me for a while.
 
@@ -38,7 +37,6 @@ For model storage, I'm using an **NFS mount from TrueNAS** at `/mnt/truenas/mode
 The mount is straightforward:
 
 ```bash
-# /etc/fstab entry
 truenas.lan:/mnt/pool/models  /mnt/truenas/models  nfs  defaults,soft,timeo=150  0  0
 ```
 
@@ -75,14 +73,12 @@ Once it's up, a quick sanity check:
 
 ```bash
 curl http://100.90.135.47:8080/health
-# {"status":"ok"}
 ```
 
 And you can hit the models endpoint to confirm the served model:
 
 ```bash
 curl http://100.90.135.47:8080/v1/models
-# {"data":[{"id":"snappy-deepseek","object":"model",...}]}
 ```
 
 ### Testing Inference
@@ -160,7 +156,6 @@ CPU inference lives and dies by available RAM. The model weights need to fit in 
 If you try to load a model that's too large, vLLM will either OOM or start swapping, and performance falls off a cliff. Monitor with:
 
 ```bash
-# Watch memory usage
 watch -n 5 'free -h && echo "---" && docker stats --no-stream vllm-server'
 ```
 

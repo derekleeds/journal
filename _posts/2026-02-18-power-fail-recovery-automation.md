@@ -7,7 +7,6 @@ author: derek
 tags: [homelab, automation, unraid, home-assistant, n8n, ups]
 ---
 
-# Building a Power-Fail Recovery System for Homelab
 
 I live in an area where the power goes out a few times a year. Not long outages usually - 30 minutes, maybe an hour - but long enough to matter when you're running a homelab that hosts real services.
 
@@ -65,7 +64,6 @@ The Eaton 5PX reports its status to HA via the NUT integration. The key sensor i
 The automation triggers on the transition from `OB` to `OL` or `OL CHRG`. That's our signal that utility power has been restored.
 
 ```yaml
-# Home Assistant automation
 automation:
   - alias: "Power Restored - Wake Unraid"
     trigger:
@@ -109,19 +107,14 @@ This seems obvious, but it's buried in different places depending on your mother
 Unraid needs to have WOL enabled on the network interface. You can check and set this with `ethtool`:
 
 ```bash
-# Check WOL status
 ethtool enp2s0 | grep Wake-on
-# Wake-on: d    <-- 'd' means disabled
 
-# Enable WOL
 ethtool -s enp2s0 wol g
-# Wake-on: g    <-- 'g' means enabled (magic packet)
 ```
 
 To make this persistent across reboots in Unraid, add it to the go file:
 
 ```bash
-# /boot/config/go
 ethtool -s enp2s0 wol g
 ```
 

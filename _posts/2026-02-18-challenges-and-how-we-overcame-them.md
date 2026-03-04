@@ -7,7 +7,6 @@ author: derek
 tags: [openclaw, homelab, troubleshooting, lessons-learned]
 ---
 
-# Challenges & How We Overcame Them
 
 Nothing in the homelab works on the first try. That's not a complaint - it's just reality. Every project comes with its own set of obstacles, and the OpenClaw Journal was no exception.
 
