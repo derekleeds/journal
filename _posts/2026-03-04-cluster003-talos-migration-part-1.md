@@ -5,6 +5,7 @@ date: 2026-03-04
 author: derek
 classes: wide
 header:
+  teaser: /assets/img/server-tech.jpg
   image: "/assets/img/server-tech.jpg"
 tags: [talos, kubernetes, homelab, migration, kexec, proxmox]
 ---

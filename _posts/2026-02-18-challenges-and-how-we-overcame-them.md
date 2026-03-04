@@ -4,6 +4,7 @@ classes: wide
 title: "Challenges & How We Overcame Them"
 date: 2026-02-18
 header:
+  teaser: /assets/img/problem-solving.jpg
   image: "/assets/img/problem-solving.jpg"
 author: derek
 tags: [openclaw, homelab, troubleshooting, lessons-learned]

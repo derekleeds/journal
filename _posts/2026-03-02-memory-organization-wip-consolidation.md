@@ -4,6 +4,7 @@ classes: wide
 title: "Memory Organization: Cleaning Up the Workspace"
 date: 2026-03-02
 header:
+  teaser: /assets/img/homelab-stack.jpg
   image: "/assets/img/homelab-stack.jpg"
 author: derek
 tags: [openclaw, memory, organization, processes]

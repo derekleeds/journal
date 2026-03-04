@@ -4,6 +4,7 @@ classes: wide
 title: "Building the OpenClaw Journal"
 date: 2026-02-18
 header:
+  teaser: /assets/img/journal.jpg
   image: "/assets/img/journal.jpg"
 author: derek
 tags: [homelab, openclaw, nextjs, payload-cms, blog]

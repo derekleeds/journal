@@ -4,6 +4,7 @@ classes: wide
 title: "Building a Power-Fail Recovery System for Homelab"
 date: 2026-02-18
 header:
+  teaser: /assets/img/server-tech.jpg
   image: "/assets/img/server-tech.jpg"
 author: derek
 tags: [homelab, automation, unraid, home-assistant, n8n, ups]

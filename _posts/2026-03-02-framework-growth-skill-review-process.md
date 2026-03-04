@@ -4,6 +4,7 @@ classes: wide
 title: "Framework Growth: Establishing a Formal Skill Review Process"
 date: 2026-03-02
 header:
+  teaser: /assets/img/journal.jpg
   image: "/assets/img/journal.jpg"
 author: derek
 tags: [openclaw, ai-agents, skills, process, governance]

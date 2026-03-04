@@ -4,6 +4,7 @@ classes: wide
 title: "Lessons from the Trenches"
 date: 2026-02-18
 header:
+  teaser: /assets/img/learning.jpg
   image: "/assets/img/learning.jpg"
 author: derek
 tags: [openclaw, ai-agents, lessons-learned, homelab]
