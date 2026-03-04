@@ -2,6 +2,7 @@
 layout: post
 title: "Memory Management: Things to Remember"
 date: 2026-02-23
+image: "/assets/img/ai-brain.jpg"
 author: derek
 tags: [openclaw, memory, qmd, agent, context]
 ---

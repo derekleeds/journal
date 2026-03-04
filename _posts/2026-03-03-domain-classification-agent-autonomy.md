@@ -2,13 +2,41 @@
 layout: post
 title: "Domain Classification for Agent Autonomy"
 date: 2026-03-03
+image: "/assets/img/agent-audit.jpg"
 author: derek
 tags: [cynefin, ai-agents, homelab, operations]
 ---
 
-![Cynefin Framework Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Cynefin-framework-2-en.svg/800px-Cynefin-framework-2-en.svg.png)
+The Cynefin framework helps classify problem domains by cause-effect relationships.
 
-*The Cynefin framework helps classify problem domains by cause-effect relationships. Source: [Wikipedia](https://en.wikipedia.org/wiki/Cynefin_framework) (CC BY-SA)*
+```
+                    ┌─────────────────────────────────────┐
+                    │           DISORDER                  │
+                    │   (don't know which domain)         │
+                    └─────────────────────────────────────┘
+                           ↙           ↘
+    ┌─────────────────┐              ┌─────────────────┐
+    │     CLEAR       │              │    CHAOTIC      │
+    │   (Obvious)     │              │  (Unknowable)   │
+    │                 │              │                 │
+    │ Sense-Categorize│              │ Act-Sense-Respond
+    │ Respond         │              │                 │
+    │                 │              │                 │
+    │ Best Practices  │              │ Rapid Response  │
+    └─────────────────┘              └─────────────────┘
+           ↓                                ↑
+    ┌─────────────────┐              ┌─────────────────┐
+    │  COMPLICATED    │              │    COMPLEX      │
+    │  (Knowable)     │              │  (Emergent)     │
+    │                 │              │                 │
+    │ Sense-Analyze   │              │ Probe-Sense-    │
+    │ Respond         │              │ Respond         │
+    │                 │              │                 │
+    │ Expert Analysis │              │ Safe-to-Fail    │
+    └─────────────────┘              └─────────────────┘
+```
+
+*[Cynefin framework](https://en.wikipedia.org/wiki/Cynefin_framework) by Dave Snowden (CC BY-SA)*
 
 How do you know when an AI agent can act on its own, and when it needs human approval? I've been thinking about this question a lot while building Clawdia, my homelab automation agent.
 

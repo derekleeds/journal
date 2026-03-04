@@ -2,6 +2,7 @@
 layout: post
 title: "Challenges & How We Overcame Them"
 date: 2026-02-18
+image: "/assets/img/problem-solving.jpg"
 author: derek
 tags: [openclaw, homelab, troubleshooting, lessons-learned]
 ---
