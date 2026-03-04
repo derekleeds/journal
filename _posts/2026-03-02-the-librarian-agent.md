@@ -1,12 +1,14 @@
 ---
-layout: post
+layout: single
 title: "The Librarian: Why Every Agentic System Needs a Standards Guardian"
 date: 2026-03-02
 author: derek
 tags: [openclaw, agents, librarian, knowledge-management, ai-teams]
-category: openclaw
+show_date: true
+read_time: true
+share: true
+related: true
 ---
-layout: post
 
 # The Librarian: Why Every Agentic System Needs a Standards Guardian
 

@@ -1,0 +1,12 @@
+derek:
+  name: Derek Leeds
+  avatar: "/assets/img/avatar.png"
+  bio: "Homelab enthusiast, AI agent builder, learning by doing."
+  location: "Overland Park, KS"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/derekleeds"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:contact@derekleeds.com"

@@ -1,12 +1,14 @@
 ---
-layout: post
+layout: single
 title: "Challenges & How We Overcame Them"
 date: 2026-02-18
 author: derek
 tags: [openclaw, homelab, troubleshooting, lessons-learned]
-category: openclaw
+show_date: true
+read_time: true
+share: true
+related: true
 ---
-layout: post
 
 # Challenges & How We Overcame Them
 

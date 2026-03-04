@@ -1,12 +1,14 @@
 ---
-layout: post
+layout: single
 title: "Organizing Clawdia's Brain: How We Structured OpenClaw for Scale"
 date: 2026-02-28
 author: derek
 tags: [openclaw, ai-agents, memory, organization, devops]
-category: openclaw
+show_date: true
+read_time: true
+share: true
+related: true
 ---
-layout: post
 
 # Organizing Clawdia's Brain: How We Structured OpenClaw for Scale
 

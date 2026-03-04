@@ -1,12 +1,14 @@
 ---
-layout: post
+layout: single
 title: "Lessons from the Trenches"
 date: 2026-02-18
 author: derek
 tags: [openclaw, ai-agents, lessons-learned, homelab]
-category: openclaw
+show_date: true
+read_time: true
+share: true
+related: true
 ---
-layout: post
 
 # Lessons from the Trenches
 

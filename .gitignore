@@ -5,3 +5,6 @@ _site/
 vendor/
 Gemfile.lock
 *.gem
+.jekyll-cache/
+.jekyll-metadata
+_site/

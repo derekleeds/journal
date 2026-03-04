@@ -1,4 +1,88 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+// Import minima theme
+@import "minima";
+
+// Dark theme overrides
+:root {
+  --background-color: #1a1a2e;
+  --text-color: #eee;
+  --link-color: #64b5f6;
+  --link-hover-color: #90caf9;
+  --border-color: #333;
+  --code-bg: #2d2d2d;
+  --pre-bg: #262626;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.site-header {
+  background-color: #16213e;
+  border-color: var(--border-color);
+}
+
+.site-header .site-title {
+  color: var(--text-color);
+}
+
+.site-header .site-nav .page-link {
+  color: var(--link-color);
+}
+
+.site-footer {
+  background-color: #16213e;
+  border-color: var(--border-color);
+  color: #aaa;
+}
+
+.post-meta {
+  color: #888;
+}
+
+pre, code {
+  background-color: var(--code-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+pre {
+  background-color: var(--pre-bg);
+}
+
+blockquote {
+  color: #aaa;
+  border-left-color: #444;
+}
+
+hr {
+  border-color: var(--border-color);
+}
+
+table {
+  border-color: var(--border-color);
+}
+
+th {
+  background-color: #2d3748;
+  color: var(--text-color);
+}
+
+td {
+  border-color: var(--border-color);
+}
+
+tr:nth-child(even) {
+  background-color: #1e293b;
+}

@@ -1,12 +1,14 @@
 ---
-layout: post
+layout: single
 title: "Building a Power-Fail Recovery System for Homelab"
 date: 2026-02-18
 author: derek
 tags: [homelab, automation, unraid, home-assistant, n8n, ups]
-category: homelab
+show_date: true
+read_time: true
+share: true
+related: true
 ---
-layout: post
 
 # Building a Power-Fail Recovery System for Homelab
 

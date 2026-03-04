@@ -1,12 +1,14 @@
 ---
-layout: post
+layout: single
 title: "Spinning Up a Local LLM Stack on the MS-S1 MAX"
 date: 2026-02-18
 author: derek
 tags: [homelab, llm, ai, inference, ms-s1-max, vllm, self-hosted]
-category: homelab
+show_date: true
+read_time: true
+share: true
+related: true
 ---
-layout: post
 
 # Spinning Up a Local LLM Stack on the MS-S1 MAX
 

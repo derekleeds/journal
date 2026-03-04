@@ -1,92 +1,11 @@
 ---
-layout: post
-title: "Memory Management: Things to Remember"
+layout: single
+title: "Memory Management: Things to Remember"" "
 date: 2026-02-23
 author: derek
 tags: [openclaw, memory, qmd, agent, context]
-category: engineering
----
-layout: post
-
-# Memory Management: Things to Remember
-
-One of the trickiest parts of building an autonomous agent is giving it memory. Not just the ability to store data, but to actually *remember* what matters across sessions, prioritize what's important, and know when to forget. Today I'm diving into how OpenClaw handles memory - the architecture, the tools, and why we made the choices we did. 
-
-## The Memory Problem
-
-When you're building an agent that runs in bursts (responding to messages, handling tasks, then going dormant), you face a fundamental challenge: how do you maintain context between sessions? A human remembers their previous conversations, their preferences, the context of ongoing projects. An agent that starts fresh each time is constantly reinventing the wheel. 
-
-We needed a memory system that could:
-
-1. **Persist across sessions** - survive restarts and service updates
-2. **Organize by importance** - not everything is equally worth remembering
-3. **Stay manageable** - no one wants to dig through megabytes of chat logs to find one important detail
-4. **Support both short-term and long-term** - like human memory, we need working memory for current tasks and episodic memory for past events
-
-## How We've Set It Up
-
-OpenClaw uses a layered memory architecture. It's not a single database or file - it's a system of interconnected storage mechanisms, each serving a different purpose.
-
-### The Core Components
-
-**Daily Notes** (`memory/YYYY-MM-DD.md`)
-Every session that produces notable events gets recorded in time-stamped daily notes. These are raw, chronological logs of what happened - messages received, tasks completed, decisions made. Think of these as the agent's "diary" - not polished, just factual.
-
-**Long-Term Memory** (`MEMORY.md`)
-This is the curated distillation. After each session (or periodically during heartbeats), important events get distilled into this file. It's the highlights reel - the decisions, lessons, preferences, and context that should persist. We treat this file as the "true" memory that gets loaded at the start of each main session.
-
-**The AGENTS.md Constitution**
-Every agent workspace has an `AGENTS.md` file that serves as its foundational memory - who it is, what its rules are, how it should behave. This isn't memory in the episodic sense - it's more like personality and procedure combined. Every session starts by reading this file.
-
-### Why Flat Files?
-
-You might notice we use plain markdown files rather than a database. That's deliberate:
-
-- **Human readability** - I can open any memory file and understand what's there
-- **No additional infrastructure** - no MongoDB, Redis, or SQL needed
-- **Easy to version control** - Git tracks changes naturally
-- **Simple to backup** - just copy the files
-- **Debuggable** - when something goes wrong, I can see exactly what's in memory
-
-For a personal agent running in a homelab, this trade-off makes sense. We're not processing millions of memories - we're managing a few thousand lines of markdown. A database would be overkill.
-
-## How the Memory Is Organized
-
-The memory system follows a simple hierarchy:
-
-```
-workspace/
-├── AGENTS.md          # Foundational rules and identity
-├── MEMORY.md          # Long-term curated memories
-├── TOOLS.md           # Local tool configurations
-└── memory/
-    ├── heartbeat-state.json    # Tracking periodic checks
-    ├── 2026-02-20.md          # Daily notes
-    ├── 2026-02-21.md
-    └── 2026-02-22.md
-```
-
-The key insight is **separation of concerns**:
-
-- **AGENTS.md** never changes based on events - it's the unchanging constitution
-- **MEMORY.md** is writeable in main sessions but loadable selectively
-- **Daily notes** are append-only - once written, they're historical record
-- **Heartbeat state** is ephemeral tracking data that gets updated frequently
-
-We also have a crucial security distinction: MEMORY.md is **only loaded in main sessions** (direct chats with the human). In shared contexts like group chats or Discord, the agent doesn't load personal context. This prevents accidentally leaking private information to strangers - a genuine concern when your agent participates in group conversations.
-
-## How Clawdia Is Now Using QMD
-
-This is the recent change that prompted this post. We recently migrated from traditional markdown to **QMD** (Quarto Markdown) for certain memory files.
-
-QMD adds YAML metadata blocks at the top of markdown files, along with enhanced formatting capabilities. The frontmatter looks like:
-
-```yaml
----
-title: "Session Notes"
-date: 2026-02-23
-tags: [openclaw, session]
-category: memory
+show_date: true
+read_time: true
 ---
 ```
 
