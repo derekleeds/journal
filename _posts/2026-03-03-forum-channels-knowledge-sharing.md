@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "Forum Channels as a Knowledge Discovery Layer"
 date: 2026-03-03
 author: derek
 tags: [openclaw, knowledge-management, discord, agents]
 category: engineering
 ---
+layout: post
 
 Running an agent fleet means generating a lot of knowledge. Procedures get documented. Decisions get made. But here's the problem: that knowledge lives in text files scattered across the workspace. Finding something later means grepping through directories or remembering which agent wrote what to which daily note.
 

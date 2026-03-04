@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "Memory Management: Things to Remember"
 date: "2026-02-24"
 description: "A deep dive into how Clawdia's memory is organized, why we chose Quarto Markdown, and what we've learned from building a memory system that actually works."
 author: "Derek"
 tags: ["openclaw", "ai-agents", "memory", "architecture", "quarto"]
 ---
+layout: post
 
 # Memory Management: Things to Remember
 

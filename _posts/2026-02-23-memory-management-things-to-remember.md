@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "Memory Management: Things to Remember"
 date: 2026-02-23
 author: derek
 tags: [openclaw, memory, qmd, agent, context]
 category: engineering
 ---
+layout: post
 
 # Memory Management: Things to Remember
 
