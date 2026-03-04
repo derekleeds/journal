@@ -52,3 +52,5 @@ Using [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) - dark m
 
 Migrated from Payload CMS (Next.js + MongoDB) to static markdown files.
 All content preserved with minimal formatting changes.
+
+Deployed on Cloudflare Pages.
