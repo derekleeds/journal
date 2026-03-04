@@ -61,6 +61,13 @@ author:
 # Site teaser image (default for posts without images)
 teaser: /assets/img/journal.jpg
 
+# Navigation menu (Minimal Mistakes)
+masthead:
+  - title: "Posts"
+    url: /
+  - title: "About"
+    url: /about/
+
 # Default front matter for posts
 defaults:
   - scope:
