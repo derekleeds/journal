@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Memory Management: Things to Remember"
+title: "Memory Files: Why QMD Format"
 date: 2026-02-23
 image: "/assets/img/ai-brain.jpg"
 author: derek
