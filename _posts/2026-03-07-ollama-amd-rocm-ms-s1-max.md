@@ -26,21 +26,38 @@ services:
   ollama:
     image: ollama/ollama:0.17.5-rocm
     container_name: ollama
+    hostname: ollama
     restart: unless-stopped
-    environment:
-      - HSA_OVERRIDE_GFX_VERSION=11.0.0
-      - OLLAMA_MAX_LOADED_MODELS=4
-      - OLLAMA_NUM_PARALLEL=4
+    ports:
+      - "11434:11434"
     volumes:
-      - /mnt/nfs/models:/root/.ollama
+      - ./ollama_data:/root/.ollama
+      - /usr/share/libdrm/amdgpu.ids:/usr/share/libdrm/amdgpu.ids:ro
+      - /home/derekleeds/openclaw/memory:/app/docs:ro
     devices:
       - /dev/kfd:/dev/kfd
       - /dev/dri:/dev/dri
-    ports:
-      - "11434:11434"
+    environment:
+      # Hardware Optimization
+      - HSA_OVERRIDE_GFX_VERSION=11.5.1
+      - HSA_ENABLE_SDMA=0
+      - OLLAMA_FLASH_ATTENTION=true
+      
+      # Memory & Stability
+      - OLLAMA_CONTEXT_LENGTH=32768
+      - OLLAMA_KV_CACHE_TYPE=q4_0
+      - OLLAMA_LOAD_TIMEOUT=10m
+      - OLLAMA_GPU_OVERHEAD=4096
+      - HSA_XNACK=1
+      
+      # Concurrent Multi-Agent Support
+      - OLLAMA_NUM_PARALLEL=4
+      - OLLAMA_MAX_LOADED_MODELS=2
 ```
 
-The key here is `HSA_OVERRIDE_GFX_VERSION=11.0.0` - without it, ROCm doesn't recognize the Strix Halo GPU properly. And I'm using NFS for model storage because these files are enormous and I don't want to fill up the local NVMe.
+The critical setting is `HSA_OVERRIDE_GFX_VERSION=11.5.1` - this tells ROCm that the Strix Halo iGPU is RDNA 3.5 architecture. Without it, the GPU won't be recognized properly. The other settings handle memory stability (`HSA_XNACK=1` for retry on page faults), prevent SDMA memory access faults (`HSA_ENABLE_SDMA=0`), and enable flash attention for faster high-context processing.
+
+I'm using bind mounts for model storage and memory sync because the files are enormous and I don't want to fill up the local NVMe. The memory mount also enables automatic QMD indexing of new documents.
 
 ## What Actually Works
 
