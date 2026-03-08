@@ -1,8 +1,12 @@
 ---
-layout: post
+layout: single
+classes: wide
 title: "Running Ollama with AMD ROCm on the MS-S1-MAX: From vLLM Experiments to Production"
 date: 2026-03-07
-categories: [homelab, ai]
+header:
+  teaser: /assets/img/ollama-amd-rocm-teaser.png
+  image: "/assets/img/ollama-amd-rocm-teaser.png"
+author: derek
 tags: [ollama, amd-rocm, llm, self-hosted, strix-halo, ms-s1-max]
 ---
 
