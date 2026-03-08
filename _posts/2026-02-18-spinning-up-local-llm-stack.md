@@ -29,16 +29,16 @@ There are four reasons I wanted local inference, and they're all pretty simple:
 
 The MS-S1 MAX is a high-end mini PC that punches well above its weight for inference workloads. The key spec is RAM - it has enough to load reasonably large models entirely into memory, which is what you need for CPU-based inference at acceptable speeds.
 
-It sits on **VLAN 10 (Secure)** in my homelab network, which is the isolated segment I use for anything that handles sensitive data or runs AI workloads. VLAN 10 is firewalled off from the main lab network and the home network - it can reach out to the internet for model downloads, but inbound access is restricted to specific services via Tailscale and internal routing rules.
+It sits on an **isolated secure VLAN** in my homelab network, which is the segment I use for anything that handles sensitive data or runs AI workloads. This VLAN is firewalled off from the main lab network and the home network - it can reach out to the internet for model downloads, but inbound access is restricted to specific services via Tailscale and internal routing rules.
 
-The Tailscale address is `100.90.135.47`, which means I can hit it from anywhere on my tailnet without exposing it to the broader internet.
+The Tailscale address means I can hit it from anywhere on my tailnet without exposing it to the broader internet.
 
-For model storage, I'm using an **NFS mount from TrueNAS** at `/mnt/truenas/models/`. This is important - LLM model files are huge (anywhere from 4GB to 30GB+ depending on the model and quantization), and I don't want to eat up the MS-S1 MAX's internal storage. The TrueNAS box has plenty of spinning rust for bulk storage, and NFS keeps things simple.
+For model storage, I'm using an **NFS mount from my NAS** at `/mnt/nas/models/`. This is important - LLM model files are huge (anywhere from 4GB to 30GB+ depending on the model and quantization), and I don't want to eat up the MS-S1 MAX's internal storage. The NAS box has plenty of spinning rust for bulk storage, and NFS keeps things simple.
 
 The mount is straightforward:
 
 ```bash
-truenas.lan:/mnt/pool/models  /mnt/truenas/models  nfs  defaults,soft,timeo=150  0  0
+nas.lan:/mnt/pool/models  /mnt/nas/models  nfs  defaults,soft,timeo=150  0  0
 ```
 
 ## The Stack
@@ -73,13 +73,13 @@ A few things to note:
 Once it's up, a quick sanity check:
 
 ```bash
-curl http://100.90.135.47:8080/health
+curl http://<llm-host>:8080/health
 ```
 
 And you can hit the models endpoint to confirm the served model:
 
 ```bash
-curl http://100.90.135.47:8080/v1/models
+curl http://<llm-host>:8080/v1/models
 ```
 
 ### Testing Inference
@@ -87,7 +87,7 @@ curl http://100.90.135.47:8080/v1/models
 A quick test to make sure it's actually generating:
 
 ```bash
-curl http://100.90.135.47:8080/v1/chat/completions \
+curl http://<llm-host>:8080/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "snappy-deepseek",
@@ -108,7 +108,7 @@ This is where it gets useful. The local inference endpoint is configured as a cu
   "providers": {
     "vllm-local": {
       "type": "openai-compatible",
-      "baseUrl": "http://100.90.135.47:8080/v1",
+      "baseUrl": "http://<llm-host>:8080/v1",
       "models": {
         "snappy-deepseek": {
           "contextWindow": 8192,
@@ -146,9 +146,9 @@ Two things that helped:
 
 ### VLAN Isolation Is Worth the Complexity
 
-Having the inference stack on VLAN 10 means even if there's a vulnerability in vLLM or the model does something unexpected, the blast radius is contained. VLAN 10 can't reach my home network, can't reach the IoT devices, and has limited access to the rest of the lab.
+Having the inference stack on an isolated VLAN means even if there's a vulnerability in vLLM or the model does something unexpected, the blast radius is contained. The isolated VLAN can't reach my home network, can't reach the IoT devices, and has limited access to the rest of the lab.
 
-The downside is routing complexity. Services on other VLANs that need to hit the inference API have to go through the firewall, which means explicit rules for each consumer. Tailscale simplifies this a lot - anything on my tailnet can reach `100.90.135.47:8080` regardless of VLAN, which is the path most of my tools use.
+The downside is routing complexity. Services on other VLANs that need to hit the inference API have to go through the firewall, which means explicit rules for each consumer. Tailscale simplifies this a lot - anything on my tailnet can reach the inference endpoint regardless of VLAN, which is the path most of my tools use.
 
 ### Memory Management Is the Whole Game
 
