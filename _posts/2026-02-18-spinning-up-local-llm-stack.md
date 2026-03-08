@@ -1,9 +1,11 @@
 ---
 layout: single
+classes: wide
 title: "Spinning Up a Local LLM Stack on the MS-S1 MAX"
 date: 2026-02-18
 header:
-  image: "/assets/img/ai-brain.jpg"
+  teaser: /assets/img/ms-s1-max.jpg
+  image: "/assets/img/ms-s1-max.jpg"
 author: derek
 tags: [homelab, llm, ai, inference, ms-s1-max, vllm, self-hosted]
 ---

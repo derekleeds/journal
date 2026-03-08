@@ -1,8 +1,10 @@
 ---
 layout: single
+classes: wide
 title: "Domain Classification for Agent Autonomy"
 date: 2026-03-03
 header:
+  teaser: /assets/img/agent-audit.jpg
   image: "/assets/img/agent-audit.jpg"
 author: derek
 tags: [cynefin, ai-agents, homelab, operations]

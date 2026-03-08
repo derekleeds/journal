@@ -3,6 +3,10 @@ layout: single
 title: "Migrating My Homelab to Talos Linux: Part 1 - The Kexec Plan"
 date: 2026-03-04
 author: derek
+classes: wide
+header:
+  teaser: /assets/img/server-tech.jpg
+  image: "/assets/img/server-tech.jpg"
 tags: [talos, kubernetes, homelab, migration, kexec, proxmox]
 ---
 I've been running my homelab Kubernetes clusters on Proxmox VMs for a while now. It works, but there's always been this nagging feeling: I'm managing general-purpose operating systems when all I really want is Kubernetes. Every security update, every package manager conflict, every "wait, why is this service running?" moment could be eliminated with something purpose-built.

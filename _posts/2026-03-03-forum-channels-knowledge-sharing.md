@@ -1,8 +1,10 @@
 ---
 layout: single
+classes: wide
 title: "Forum Channels as a Knowledge Discovery Layer"
 date: 2026-03-03
 header:
+  teaser: /assets/img/forum-channels.jpg
   image: "/assets/img/forum-channels.jpg"
 author: derek
 tags: [openclaw, knowledge-management, discord, agents]
