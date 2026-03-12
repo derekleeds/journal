@@ -68,14 +68,14 @@ Downloads to `~/workspace/downloads/`.
 
 This one mattered for Tailscale integration.
 
-The old instance on pnode200 was hosting the docs site at `docs.tailbd8f6.ts.net`. We needed to:
+The old instance on pnode200 was hosting the docs site at `docs.<tailscale>.net`. We needed to:
 
 1. Stop the container on pnode200
 2. Sync the docs content via rsync
 3. Start the new container on openclaw-node01 with Docktail labels
 4. Tag openclaw-node01 in Tailscale with `tag:server`
 
-Docktail reads the container labels and creates Tailscale Funnel services automatically. Once the node had the right tag, `docs.tailbd8f6.ts.net` pointed to the new host.
+Docktail reads the container labels and creates Tailscale Funnel services automatically. Once the node had the right tag, `docs.<tailscale>.net` pointed to the new host.
 
 ### What We Skipped
 
