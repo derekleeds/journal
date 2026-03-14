@@ -8,8 +8,6 @@ header:
 author: derek
 tags: [openclaw, security, 1password, credentials, homelab]
 ---
-# From 127 Plaintext Secrets to Zero: Our 1Password Migration
-
 Running an AI agent system means managing a lot of API keys. Anthropic, OpenRouter, Cloudflare, Google, Discord, Brave Search, Todoist, Notion — the list grows with every integration. For months, those credentials lived in `.env` files and JSON configs. It worked. It also meant plaintext secrets scattered across dozens of files.
 
 Today we fixed that.
