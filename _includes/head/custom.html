@@ -6,7 +6,10 @@
 </script>
 
 <!-- Link to Markdown source for AI agents -->
-<link rel="alternate" type="text/markdown" href="{{ page.url | append: '.md' }}">
+{% assign slug = page.url | split: '/' | last | remove_first: '/' %}
+{% if slug != '' %}
+<link rel="alternate" type="text/markdown" href="/{{ slug }}.md">
+{% endif %}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QM12M41H5"></script>
