@@ -25,7 +25,7 @@ bundle exec jekyll build
 ## Deploy to Cloudflare Pages
 
 1. Connect GitHub repo in Cloudflare dashboard
-2. Build command: `bundle exec jekyll build`
+2. **Custom build command:** `bundle exec jekyll build && bash bin/copy-markdown.sh`
 3. Output directory: `_site`
 4. Custom domain: `journal.derekleeds.cloud`
 
