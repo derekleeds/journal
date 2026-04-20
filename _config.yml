@@ -30,6 +30,8 @@ plugins:
 # Include pages directory
 include:
   - _pages
+  - .well-known
+  - robots.txt
 
 # Exclude from build
 exclude:
