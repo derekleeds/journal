@@ -1,0 +1,14 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://journal.derekleeds.cloud",
+      "service-doc": [
+        {
+          "href": "https://journal.derekleeds.cloud/about/",
+          "type": "text/html",
+          "title": "About OpenClaw Journal"
+        }
+      ]
+    }
+  ]
+}

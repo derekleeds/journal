@@ -1,0 +1,31 @@
+# Cloudflare Agent Readiness - robots.txt
+# https://isitagentready.com
+
+# Allow all crawlers access to public content
+User-agent: *
+Allow: /
+
+# AI Crawler Access Rules
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Content Signals - AI content usage preferences
+# ai-train: Content may be used for training
+# search: Content may be indexed for search
+# ai-input: Content may be used as input to AI systems
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+# Sitemap location
+Sitemap: https://journal.derekleeds.cloud/sitemap.xml

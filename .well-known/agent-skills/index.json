@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schemas/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "OpenClaw Journal",
+      "type": "reference",
+      "description": "Personal blog documenting homelab adventures, AI agent development, and learning by doing",
+      "url": "https://journal.derekleeds.cloud",
+      "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

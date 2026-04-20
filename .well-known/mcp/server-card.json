@@ -1,0 +1,17 @@
+{
+  "$schema": "https://github.com/cloudflare/agent-skills-discovery-rfc/blob/main/schemas/mcp-server-card-v1.json",
+  "serverInfo": {
+    "name": "OpenClaw Journal",
+    "version": "1.0.0",
+    "description": "Personal learning documentation and blog for AI agents and homelab"
+  },
+  "transport": {
+    "type": "sse",
+    "url": "https://journal.derekleeds.cloud/.well-known/mcp/sse"
+  },
+  "capabilities": {
+    "resources": {
+      "listChanged": true
+    }
+  }
+}
